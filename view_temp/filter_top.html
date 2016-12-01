@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    @@include('common/head.html',{"name":"筛选"})    
+    <link href="../css/main_bady.css" rel="stylesheet"/>
+     <link href="../css/filter_center.css" rel="stylesheet"/>
+</head>
+<body>
+	@@include('common/navbar.html',{"name":"筛选","left":"left-map-icon","right":"text_queren"});
+	<div class="main_center">
+		<div class="inputcommentsarea" style="">
+			<div class="user">
+				<!-- <textarea class="commentinput" placeholder="请输入评论内容，你也可以在评论中@。"></textarea> -->
+				<ul class="filter">
+					<li data-type="area">
+						<span class="area_icon lefticon">地区</span>
+						<span class="right_icon righticon"></span>
+					</li>
+					<li data-type="startTime">
+						<span class="time_icon lefticon">起始时间</span>
+						<span class="right_icon righticon"></span>
+					</li>
+					<li data-type="endTime">
+						<span class="time_icon lefticon">结束时间</span>
+						<span class="right_icon righticon"></span>
+					</li>					
+					<li data-type="type">
+						<span class="type_icon lefticon">类型</span>
+						<span class="right_icon righticon"></span>
+					</li>									
+				</ul>
+			</div>
+		</div>		
+	</div>
+
+	<script src="../js/zepto_1.1.3.js"></script>
+	@@include('common/commonjs.html')
+	<script src="../js/fiter_top.js"></script>
+	<script type="text/babel" src="../js/fiter_top.jsx"></script>		
+</body>
+</html>

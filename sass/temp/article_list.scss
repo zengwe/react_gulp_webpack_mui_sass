@@ -1,0 +1,225 @@
+$cnt-info-h:0.5;
+@mixin userinfoblock{
+		.userinfo{
+			height: $cnt-info-h+rem;
+			display: block;
+			float: left;
+			.user-photo{
+				border:0px none;
+				display: inline-block;
+				vertical-align: top;
+				height: $cnt-info-h+rem;
+				width: $cnt-info-h+rem;
+				border-radius: 50%;
+			}
+			.text-info{
+				display: inline-block;
+				vertical-align: top;
+				height: $cnt-info-h+rem;
+				.nike-name{
+					display: block;
+					height: ($cnt-info-h*0.6)+rem;
+					line-height: ($cnt-info-h*0.6)+rem;
+					font-size: 0.16rem;
+					color: #22222e;
+				}
+				.pub-time{
+					display: block;
+					height: ($cnt-info-h*0.4)+rem;
+					line-height: ($cnt-info-h*0.4)+rem;
+					font-size: 0.12rem;
+					color:#a1a1b3;
+				}
+			}
+		}	
+}
+@mixin text-main{
+	.contenttext{
+		font-size: 0.16rem;
+		line-height: 0.25rem;
+		color: #22222e;
+		.theme-title{
+			color:#45e6b0;
+		}
+		display: inline;
+	}	
+}
+.main-list{
+	position: relative;
+	padding:0.2rem 0.2rem 0rem 0.2rem;	
+	background-color: #ffffff;
+	margin:0.1rem 0px 0px 0px;	
+	.content-info{
+		overflow: hidden;
+		height: $cnt-info-h+rem;
+		&:after{
+			display: block;
+			clear: both;
+		}
+		@include userinfoblock;
+		.response{
+			height: $cnt-info-h+rem;
+			display: block;
+			float: right;
+			@mixin padfont{
+				display: inline-block;
+				vertical-align: top;
+				font-size: 0.14rem;
+				color:#3d3d4d;
+				height: $cnt-info-h+rem;
+				line-height: $cnt-info-h+rem;
+				padding:0px 0.1rem 0px 0.3rem;
+				background-size: 0.22rem 0.22rem;
+			}
+			.comments{
+				background:url("#{$icon-img}huifu.png") no-repeat 0rem ($cnt-info-h/2-0.22/2)+rem;
+				@include padfont;
+			}
+			.likes{
+				background:url("#{$icon-img}ding_w.png") no-repeat 0rem ($cnt-info-h/2-0.22/2)+rem;
+				@include padfont;
+			}
+		}
+	}
+	.article{
+		position: relative;
+		.text-desc{
+			padding:0.1rem 0px 0.15rem 0px;
+			@include text-main;
+			.sounds{
+				.status{
+					display: inline-block;
+					vertical-align: top;
+					height: 0.3rem;
+					width: 1.0rem;
+					background-color:#b8b8cc;
+					border-radius: 0.15rem;
+					img{
+						height: 0.2rem;
+						width: 0.2rem;
+						position: relative;
+						top:0.05rem;
+						left: 0.1rem;
+					}
+				}
+				.sounds-time{
+					display: inline-block;
+					height: 0.3rem;
+					line-height: 0.3rem;
+					vertical-align: top;
+					font-size: 0.14rem;
+					margin-left: 0.1rem;
+					color:#b8b8cc;
+				}
+			}
+		}
+		.relation-imgs{
+			font-size: 0px;
+			border-bottom: 1px solid #eeeeee;
+			padding-bottom: 0.1rem;
+			.img-col3-mar{
+				width: 32%;
+				display: inline-block;
+				margin-right:2%;
+				height: 1.5rem;
+				&:nth-child(3n){
+					margin-right:0%;
+				}
+			}
+			.img-col1-mar{
+				width: 100%;
+				height: 1.5rem;
+			}
+			.img-col2-mar{
+				width: 49%;
+				display: inline-block;
+				margin-right:2%;
+				height: 1.5rem;
+				&:nth-child(2n){
+					margin-right:0%;
+				}
+			}
+			.video{
+				width: 100%;
+				height: 100%;
+				padding:0px 0px;
+				margin:0px 0px;				
+			}			
+		}
+		$control-h:0.3rem;
+		.controls{
+			display: none;
+			padding:0px 0px 0px 0px;
+			margin:0px 0px 0px 0px;
+			-webkit-margin-before:0px;
+			height:$control-h;
+			font-size: 0px;
+			background-color: rgba(0,0,0,0.3);
+			position: absolute;
+			width: 100%;
+			bottom: 0.25rem;
+			@mixin control-common{
+				display: inline-block; 
+			}
+			.play{
+				@include control-common;
+				vertical-align: top;
+				width: 15%;
+				height:$control-h;
+				background: url("#{$icon-img}luyinzanting.png") no-repeat center;
+				background-size: 0.2rem 0.2rem;
+			}
+			.progress{
+				@include control-common;
+				vertical-align: middle;
+				width: 70%;
+				height: 0.04rem;
+				background-color: #ffffff;
+				position: relative;
+				top:0.03rem;
+				.line{
+					display: block;
+					height: inherit;
+					width: 0.0rem;
+					position: relative;
+					background-color:#45e6b0; 
+					.point{
+						position: absolute;
+						top:-0.04rem;
+						right:0px;
+						background-color:#45e6b0;
+						height: 0.12rem;
+						width: 0.12rem;
+						border-radius: 50%;
+						overflow: hidden;
+					}
+				}
+			}
+			.time{
+				@include control-common;
+				vertical-align: top;
+				width: 15%;
+				height:$control-h;
+				color:#ffffff;
+				font-size: 0.14rem;
+				line-height: $control-h;
+				padding:0px 0px 0px 0.1rem;
+				box-sizing:border-box;
+			}
+		}
+		&:hover{
+			.controls{
+				display: block;
+			}
+		}
+	}
+	.pub-positon{
+		height: 0.5rem;
+		line-height: 0.5rem;
+		font-size: 0.14rem;
+		color: #a1a1b3;
+		padding:0px 0px 0px 0.4rem;
+		background: url("#{$icon-img}dingwei.png") no-repeat 0.1rem 0.125rem;
+		background-size: 0.25rem 0.25rem;
+	}
+}

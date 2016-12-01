@@ -1,0 +1,97 @@
+@import "./temp/var.scss";
+@import "./temp/navbar.scss";
+.footclass{
+	height: 0.6rem;
+	/*padding-top: 0.2rem;*/
+	left:0px;
+	right: 0px;
+	bottom: 0px;
+	position: fixed;
+	z-index: 100;
+	display: block;			
+	font-size: 0px;
+	background-color: #ffffff;
+	.grid{
+		background-color: #22222e;
+		height: 0.6rem;
+		width: 33.333%;
+		display: inline-block;
+		vertical-align: bottom;
+		height: 0.6rem;
+		position: relative;
+		top:0rem;
+		box-sizing:border-box;
+		/*overflow: visible;*/
+	}
+	.home{
+		background: url("#{$icon-img}zhuyeweixuan.png") no-repeat center #22222e;
+		background-size: 0.3rem 0.3rem;
+	}
+	.homeact{
+		background: url("#{$icon-img}zhuyeyuanzhong.png") no-repeat center #22222e;
+		background-size: 0.3rem 0.3rem;
+	}		
+	.personal{
+		background: url("#{$icon-img}gerenzhongxin_w.png") no-repeat center #22222e;
+		background-size: 0.3rem 0.3rem;
+	}
+	.personalact{
+		background: url("#{$icon-img}gerenzhongxin_x.png") no-repeat center #22222e;
+		background-size: 0.3rem 0.3rem;
+	}
+	.middl{
+
+		display: block;
+		position: relative;
+		bottom: 0px;
+		height: 0.6rem;
+		width: 0.6rem;
+		top:-0rem;
+		margin:0px auto;
+	}	
+}
+.mask_self{
+	display:none;
+	position: fixed;
+	width: 100%;
+	top:0px;
+	left: 0px;
+	bottom: 0px;
+	z-index: 9999;
+	background-color: rgba(0,0,0,0.5);
+	.btn_area{
+		.func_btn{
+			display: block;
+			position: fixed;
+			bottom: 0px;
+			left: 0px;
+			width: 300px;
+			background-color: #ffffff;
+			// background: url("#{$icon-img}fabutanchu.png") no-repeat center;
+			// background-size: 100% 100%;
+			// border-top-left-radius: 100%;
+			// border-top-right-radius: 100%;
+			border-radius: 150px 150px 0 0;
+			font-size: 0px;
+			height: 150px;
+			// &:after{
+			// 	width: 0.01rem;
+			// 	display: block;
+			// 	content: " ";
+			// 	padding-bottom: 50%;
+			// }
+			a{
+				display: inline-block;
+				vertical-align: top;
+				//height: 1rem;
+				width: 50%;
+			}
+		}
+		.close{
+
+		}
+	}
+}
+@import "./temp/flex.scss";
+
+		

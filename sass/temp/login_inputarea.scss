@@ -1,0 +1,180 @@
+@mixin icon{
+	height: 0.55rem;
+	width: 0.55rem;
+	position: absolute;
+	background-size: 0.3rem 0.3rem;
+	top:0.3rem;
+	display: block;
+}
+@mixin lefticon{
+	@include icon;
+	left:0.15rem;
+}
+@mixin righticon{
+	@include icon;
+	right:0.15rem;
+}
+$border-color:#787780;	
+	.input_area{
+		position: relative;
+		padding:0px 0px;
+		.hasline{
+			border-bottom: 1px solid $border-color;
+		}		
+		.input_group{
+			display: block;
+			padding: 0.5rem 0.0rem 0.1rem 0.0rem;
+			position: relative;
+			overflow: hidden;
+			width: 100%;
+			box-sizing:border-box;
+			.help-icon{
+				background: url("#{$icon-img}login_bangzhu.png") no-repeat center;
+				@include righticon;					
+			}
+			.user-icon{
+				background: url("#{$icon-img}name.png") no-repeat center;
+				@include lefticon;				
+			}
+			.phone-icon{
+				background: url("#{$icon-img}shouji.png") no-repeat center;
+				@include lefticon;				
+			}
+			.verity-icon{
+				background: url("#{$icon-img}yanzhengma.png") no-repeat center;
+				@include lefticon;				
+			}						
+			.password-icon{
+				background: url("#{$icon-img}password.png") no-repeat center;
+				@include lefticon;				
+			}
+			.xia-sanjiao-icon{
+				background: url("#{$icon-img}diquxiala.png") no-repeat center;
+				@include righticon;				
+			}
+			.sex-icon{
+				background: url("#{$icon-img}xingbiexuanze_zc.png") no-repeat center;
+				@include lefticon;				
+			}
+			.department-icon{
+				background: url("#{$icon-img}danwei_zc.png") no-repeat center;
+				@include lefticon;				
+			}
+			.motto-icon{
+				background: url("#{$icon-img}qianming_zc.png") no-repeat center;
+				@include lefticon;				
+			}															
+			.getcode-btn{
+				display: block;
+				height: 0.7rem;
+				position: absolute;
+				z-index: 101;
+				right: 0px;
+				bottom: 0rem;
+				background-color: #22222e;
+				@include noborder-input;
+				width: 1.6rem;
+				color:#ffffff;
+				font-size: 0.20rem;
+			}		
+			input{
+				@include noborder-input;
+				display:block;
+				height:0.3rem;
+				background-color: transparent;
+				width: 100%;
+				padding:0rem 0.65rem 0px 0.65rem;
+				box-sizing:border-box;
+				color:#ffffff;
+				letter-spacing: 0.02rem;
+				margin-bottom: 0px;
+			}
+			$errheight:0.28;
+			$sanjiaodibian:0.1;
+			$notice_bg_clr:#3d3d4d;
+			.err{
+				display: none;
+				position: absolute;
+				height: $errheight+rem;
+				width: $errheight+rem;
+				right:0.2rem;
+				top:0.23rem;
+				background: url("#{$icon-img}cuowutishi.png") no-repeat center;
+				background-size: 0.26rem  0.26rem;
+				overflow: visible;				
+				.triangle{
+				    width: 0;
+				    height: 0;
+				    border-left: ($sanjiaodibian/2)+rem solid transparent;
+				    border-right: ($sanjiaodibian/2)+rem solid transparent;
+				    border-bottom: $sanjiaodibian+rem solid $notice_bg_clr;
+				    display: block;
+				    position: absolute;
+				    top:$errheight+rem;
+				    right:($errheight/2-$sanjiaodibian/2)+rem;					
+				}
+				.notice_text{
+					display: block;
+					position: absolute;
+					word-break:keep-all;
+					white-space:nowrap;
+					top:($sanjiaodibian+$errheight)+rem;
+					right: 0rem;
+					background-color: $notice_bg_clr;
+					color:#a1a1b3;
+					border-radius: 0.03rem;
+					font-size:0.14rem;
+					padding:0.01rem 0.06rem;
+				}
+			}
+			@mixin curr-font-style{
+				font-size: 0.18rem;
+				color:#9b9aab;
+				line-height: 0.24rem;				
+			}
+			.remmenber{
+				display: block;
+				float: left;
+				font-size: 0px;
+				margin-left:0.3rem;
+				.button-icon{
+					display: inline-block;
+					vertical-align: top;
+					height: 0.24rem;
+					width: 0.24rem;
+					background:url("#{$icon-img}jizhumima_y.png") no-repeat center;
+					background-size: 0.22rem 0.22rem;
+				}
+				.selected{
+					background:url("#{$icon-img}jizhumima_w.png") no-repeat center;
+					background-size: 0.22rem 0.22rem;
+				}
+				span{
+					@include curr-font-style;
+					display: inline-block;
+					vertical-align: top;
+					text-indent: 0.1rem;					
+				}
+			}
+			.regist_link{
+				display: block;
+				float: right;
+				font-size: 0px;
+				margin-right:0.3rem;
+				a{
+					@include curr-font-style;
+				}
+			}
+			.submit_btn{
+				display: block;
+				@include noborder-input;
+				width: 4rem;
+				margin:0px auto 0px auto;
+				height: 0.6rem;
+				background-color: #22222e;
+				color:#ffffff;
+				border-radius: 0.6rem;
+				font-size: 0.20rem;
+			}
+		}
+	}

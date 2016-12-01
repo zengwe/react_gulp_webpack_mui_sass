@@ -1,0 +1,27 @@
+@import "./temp/var.scss";
+@import "./temp/navbar.scss";
+body{
+	background-color: #f0f5f3;
+}
+.main{
+	top: 0.6rem;
+	position: fixed;
+	$filter_h:0.45;
+	background-color: #ffffff;
+	box-sizing:border-box;
+	border-top:0.1rem solid #f0f5f3;
+	.text_area{
+		display: block;
+		position: absolute;
+		top:0px;
+		width: 100%;
+		height: 100%;
+		bottom: 0px;
+		left: 0px;
+		border:0px none;
+		&:focus{
+			outline: 0px none;
+		}
+	}
+}
+@import "./temp/flex.scss";

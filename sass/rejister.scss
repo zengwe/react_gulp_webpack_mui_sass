@@ -1,0 +1,51 @@
+@mixin icon{
+	height: 0.55rem;
+	width: 0.55rem;
+	position: absolute;
+	background-size: 0.3rem 0.3rem;
+	top:0.18rem;
+	display: block;
+}
+@mixin lefticon{
+	@include icon;
+	left:0.15rem;
+}
+@mixin righticon{
+	@include icon;
+	right:0.15rem;
+}
+$border-color:#787780;
+body{
+	margin:0px 0px;
+	padding:0px 0px;
+}
+@import "./temp/var.scss";
+@import "./temp/navbar.scss";
+.main{
+	top: 0.6rem;
+	position: fixed;
+	z-index: 2;
+	width: 100%;
+	@import "./temp/login_inputarea.scss";
+	.input_area{
+		.agree{
+			line-height: 0.5rem;
+			color:#a1a1b2;
+			font-size: 0.18rem;
+			text-indent: 0.18rem;
+		}
+	}
+}
+.bg_style{
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top:0px;
+	left:0px;
+	background: url("#{$icon-img}login_bg.png");
+	right:0px;
+	bottom: 0px;
+	z-index: 1;
+}
+@import "./temp/flex.scss";

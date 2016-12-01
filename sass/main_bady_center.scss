@@ -1,0 +1,54 @@
+@import "./temp/var.scss";
+@import "./temp/navbar.scss";
+@import "./temp/article_list.scss";
+$mainbody-footer-h:0.6;
+body{
+	background-color: $body_bg-color;
+	padding:0px 0px $mainbody-footer-h+rem 0px;
+}
+.main{
+	position: relative;
+	$filter_h:0.45;
+	.comments{
+		background-color: #ffffff;
+		margin:0.1rem 0px 0px 0px;
+		padding:0.1rem 0px 0.0rem 0px;
+		.respone{
+			// display: table;
+			// margin:0px auto;
+			padding:0rem 0.2rem;
+			.result{
+				display: inline-block;
+				vertical-align: top;
+				height: 0.35rem;
+				line-height: 0.35rem;
+				box-sizing:border-box;
+				font-size: 0.14rem;
+				padding:0px 0.05rem;
+				margin:0px 0.2rem 0px 0px;
+				color:#a1a1b3;
+			}
+			.active{
+				border-bottom:0.02rem solid #22222e;
+				color:#22222e;
+			}
+		}
+		.commentslist{
+			.list-item{
+				padding:0.1rem 0.2rem 0.1rem 0.2rem;
+				border-bottom: 1px solid #eeeeee;
+				.userblock{
+					overflow: hidden;
+					padding:0px 0px 0.05rem 0px;
+					@include userinfoblock;					
+				}
+				.conments-text{
+					@include text-main;
+				}				
+			}
+
+		}
+			
+	}
+}
+@import "./temp/flex.scss";

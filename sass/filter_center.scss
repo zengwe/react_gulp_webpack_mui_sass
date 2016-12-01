@@ -1,0 +1,222 @@
+@import "./temp/var.scss";
+@import "./temp/navbar.scss";
+body{
+    background-color: #ffffff;
+}
+.main_center{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0.6rem;
+    bottom: 0px;
+    left: 0px;
+}
+.inputcommentsarea{
+    display: block;
+    top:0.6rem;
+    left: 0px;
+    right:0px;
+    bottom: 0px;
+    z-index: 1;
+    //overflow-y:scroll;
+    position: fixed;
+    width: 100%;
+    .user{
+        display: block;
+        position: relative;
+        background-color:#ffffff;
+        top:0px;
+        left: 0px;
+        bottom: 0px;
+        z-index: 100;
+        width: 100%;
+        box-sizing:border-box;     
+        .commentinput{
+            display: block;
+            position: fixed;
+            width: 100%;
+            top:0px;
+            left: 0px;
+            bottom: 0px;
+            border:0px none;
+            margin: 0px 0px;          
+        }
+        .filter{
+            display: block;
+            padding:0px 0rem;
+            margin:0px 0px;
+            li{
+                display: block;
+                overflow: hidden;
+                padding:0px 0.2rem;
+                $li_h:0.65;
+                border-bottom: 1px solid #eeeeee;
+                @mixin li_icon($fangxiang){
+                    display: block;
+                    float: $fangxiang;
+                    height: $li_h+rem;
+                    line-height: $li_h+rem;
+                    padding-#{$fangxiang}: 0.35rem;
+                    text-align: $fangxiang;
+                    @if $fangxiang=="left"{
+                        font-size: 0.18rem;
+                        color:#333333;
+                    }@else{
+                        font-size:0.12rem;
+                        color:#a1a1b3;
+                    }
+                    i{
+                        font-style: normal;
+                        font-size: 0.12rem;
+                        color:#a1a1b3;
+                    }           
+                }
+                .lefticon{
+                    @include li_icon(left);
+                }
+                .righticon{
+                    @include li_icon(right);                
+                }
+                $bg-size:0.25;
+                @mixin icon-bg($name){                  
+                    background: url("#{$icon-img}#{$name}") no-repeat 0px ($li_h/2-$bg-size/2)+rem;
+                    background-size: $bg-size+rem $bg-size+rem;
+                }
+                @mixin icon-bg-r($name){                    
+                    background: url("#{$icon-img}#{$name}") no-repeat center;
+                    background-size: $bg-size+rem $bg-size+rem;
+                }
+                $bg-size-diqu:0.2;
+                @mixin icon-diqu($name){                    
+                    background: url("#{$icon-img}#{$name}") no-repeat 0px ($li_h/2-$bg-size-diqu/2)+rem;
+                    background-size: $bg-size-diqu+rem $bg-size-diqu+rem;
+                }                                           
+                .area_icon{
+                    @include icon-bg("diqu.png");
+                }
+                .time_icon{
+                    @include icon-bg("shijian.png");
+                }
+                .type_icon{
+                    @include icon-bg("leixing.png");
+                }
+                .diqu_icon{
+                    @include icon-diqu("danxuanyuan_w.png");
+                }
+                .diqu_icon-choosed{
+                    @include icon-diqu("danxuanyuan_y.png");
+                }               
+                .right_icon{
+                    position: relative;
+                    &:after{
+                        display: block;
+                        content: " ";
+                        position: absolute;
+                        right: 0px;
+                        height: $bg-size+rem;
+                        width: $bg-size+rem;
+                        top:($li_h/2-$bg-size/2)+rem;
+                        @include icon-bg-r("kexuanze.png");
+                    }                   
+                }
+            }
+        }
+        .time_area{
+            padding:0px 0.0rem 0px 0.0rem;
+            $title_h:0.6;
+            .title{
+                position: relative;
+                overflow: hidden;
+                span{
+                    display: block;
+                    text-align: center;
+                    height: $title_h+rem;
+                    line-height:$title_h+rem;
+                    border-bottom: 1px solid #eeeeee;
+                    font-size: 0.16rem;
+                    letter-spacing: 0.02rem;
+                    color:#22222e;
+                }
+                i{
+                    display: block;
+                    position: absolute;
+                    top:0px;
+                    height: $title_h+rem;
+                    width: $title_h+rem;
+                }
+                @mixin i_icon($fangxiang,$img_name){
+                    @if($fangxiang=="left"){
+                        left:0px;
+                        
+                    }@else{
+                        right:0px;
+                    }
+                    $bg_size:0.2;
+                    background: url("#{$icon-img}#{$img_name}") no-repeat center;
+                    background-size: ($bg_size*0.6)+rem $bg_size+rem;
+                }
+                .lefticon{
+                    @include i_icon("left","rili_l.png");
+                }
+                .righticon{
+                    @include i_icon("right","rili_r.png");
+                }
+            }
+            .time_table{
+                position: relative;
+                padding:0px 0.2rem;
+                table{
+                    position: relative;
+                    width: 100%;
+                    thead{
+                        tr{
+                            th{
+                                width: 100/14+%;
+                                text-align: center;
+                                line-height:  100%;
+                                &:before{
+                                    content:"";
+                                    display: inline-block;
+                                    padding-bottom: 60%;
+                                    width: 0.01rem;
+                                    vertical-align: middle;                                 
+                                }
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            td{
+                                width: 100/14+%;
+                                text-align: center;
+                                box-sizing:border-box;
+                                position: relative;
+                                z-index: 1;
+                                &:before{
+                                    content:"";
+                                    display: inline-block;
+                                    padding-bottom: 70%;
+                                    width: 0.01rem;
+                                    vertical-align: middle;                                 
+                                }                                                           
+                            }
+                            .active{
+                                $ac_h:0.4rem;
+                                span{
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                    height: $ac_h;
+                                    width: $ac_h;
+                                    line-height: $ac_h;
+                                    background-color: #45e6b0;
+                                    border-radius: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@import "./temp/flex.scss";

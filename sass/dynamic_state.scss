@@ -1,0 +1,76 @@
+@import "./temp/var.scss";
+@import "./temp/navbar.scss";
+body{
+	background-color: #f0f5f3;
+}
+.main{
+	top: 0.6rem;
+	position: fixed;
+	$filter_h:0.45;
+	bottom: 0rem;
+	.main-content{
+		padding-bottom: 0.22rem;
+	}
+}
+.main-list{
+	$article_info_h:0.5rem;	
+	.article_info{
+		border-top:1px solid #eeeeee;
+		padding-left:0.1rem;
+		.time{
+			display: inline-block;
+			vertical-align: top;
+			height: $article_info_h;
+			line-height: $article_info_h;
+			color: #a1a1b3;
+			font-size: 0.14rem;
+			padding-left: 0.3rem;
+			background: url("#{$icon-img}shijian_hui.png") no-repeat 0rem $article_info_h/2-0.1;
+			background-size: 0.2rem 0.2rem;
+		}
+		.respone{
+			display: inline-block;
+			div{
+				display: inline-block;
+				height: $article_info_h;
+				line-height: $article_info_h;
+				font-size: 0.16rem;
+				color: #3d3d4d;
+				padding-left: 0.3rem;
+				margin-left: 0.15rem;
+			}
+			@mixin respone($name){
+				background: url("#{$icon-img}#{$name}") no-repeat 0rem $article_info_h/2-0.12;
+				background-size: 0.24rem 0.24rem;
+			}
+			.comments{
+				@include respone("ding_w.png");
+			}
+			.liked{
+				@include respone("huifu.png");
+			}
+		}
+		.handle{
+			display: inline-block;
+			vertical-align: top;
+			a{
+				display: inline-block;
+				height: $article_info_h;
+				width: $article_info_h;
+			}
+			@mixin handle($name){
+				background: url("#{$icon-img}#{$name}") no-repeat center;
+				background-size: 0.3rem 0.3rem;
+			}
+			.share{
+				@include handle("fenxian_dt.png");
+			}
+			.remove{
+				@include handle("shanchu_dt.png");
+			}
+		}
+	}
+}
+@include footerclass;
+@import "./temp/article_list.scss";
+@import "./temp/flex.scss";

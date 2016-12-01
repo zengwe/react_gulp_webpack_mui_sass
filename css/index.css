@@ -1,0 +1,206 @@
+/*
+*@author zengw
+*@contect 584778883@qq.com
+*@time Thu Dec 01 2016 16:04:33 GMT+0800 (中国标准时间)
+*/
+@charset "UTF-8";
+.slideUp {
+  position: fixed;
+  width: 100%;
+  height: 0.6rem;
+  font-size: 0.18rem;
+  top: 0rem;
+  left: 0px;
+  background-color: red;
+  z-index: 199; }
+
+.slideDown {
+  position: fixed;
+  width: 100%;
+  height: 0.6rem;
+  font-size: 0.18rem;
+  bottom: -0.6rem;
+  left: 0px;
+  background-color: red;
+  z-index: 99; }
+
+.loadingBox {
+  width: 100%;
+  position: fixed;
+  top: 1rem;
+  z-index: 500; }
+
+.loadingBox div {
+  width: 1.2rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 0.16rem;
+  margin: 0px auto;
+  border-radius: 0.03rem; }
+
+.header {
+  height: 0.6rem;
+  position: fixed;
+  z-index: 200;
+  background-color: #646371;
+  text-align: center;
+  line-height: 0.6rem;
+  top: 0px;
+  width: 100%; }
+  .header p {
+    color: #ffffff;
+    font-size: 0.24rem;
+    margin: 0px 0px; }
+  .header .left-back-icon {
+    background: url("../img/icon/fanhui.png") no-repeat center;
+    left: 0px;
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem; }
+  .header .left-map-icon {
+    background: url("../img/icon/fanhui.png") no-repeat center;
+    left: 0px;
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem; }
+  .header .right-filter-icon {
+    background: url("../img/icon/shaixuan.png") no-repeat center;
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem;
+    right: 0px; }
+  .header .right-share-icon {
+    background: url("../img/icon/fenxiang.png") no-repeat center;
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem;
+    right: 0px; }
+  .header .text_fabu {
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem;
+    right: 0px;
+    font-size: 0.16rem;
+    color: #ffffff; }
+    .header .text_fabu:before {
+      content: "发布";
+      display: block;
+      font-style: normal; }
+  .header .text_queren {
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem;
+    right: 0px;
+    font-size: 0.16rem;
+    color: #ffffff; }
+    .header .text_queren:before {
+      content: "确认";
+      display: block;
+      font-style: normal; }
+
+.footclass {
+  height: 0.6rem;
+  /*padding-top: 0.2rem;*/
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  position: fixed;
+  z-index: 100;
+  display: block;
+  font-size: 0px;
+  background-color: #ffffff; }
+  .footclass .grid {
+    background-color: #22222e;
+    height: 0.6rem;
+    width: 33.333%;
+    display: inline-block;
+    vertical-align: bottom;
+    height: 0.6rem;
+    position: relative;
+    top: 0rem;
+    box-sizing: border-box;
+    /*overflow: visible;*/ }
+  .footclass .home {
+    background: url("../img/icon/zhuyeweixuan.png") no-repeat center #22222e;
+    background-size: 0.3rem 0.3rem; }
+  .footclass .homeact {
+    background: url("../img/icon/zhuyeyuanzhong.png") no-repeat center #22222e;
+    background-size: 0.3rem 0.3rem; }
+  .footclass .personal {
+    background: url("../img/icon/gerenzhongxin_w.png") no-repeat center #22222e;
+    background-size: 0.3rem 0.3rem; }
+  .footclass .personalact {
+    background: url("../img/icon/gerenzhongxin_x.png") no-repeat center #22222e;
+    background-size: 0.3rem 0.3rem; }
+  .footclass .middl {
+    display: block;
+    position: relative;
+    bottom: 0px;
+    height: 0.6rem;
+    width: 0.6rem;
+    top: -0rem;
+    margin: 0px auto; }
+
+.mask_self {
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.5); }
+  .mask_self .btn_area .func_btn {
+    display: block;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 300px;
+    background-color: #ffffff;
+    border-radius: 150px 150px 0 0;
+    font-size: 0px;
+    height: 150px; }
+    .mask_self .btn_area .func_btn a {
+      display: inline-block;
+      vertical-align: top;
+      width: 50%; }
+
+@media only screen and (max-width: 319px) {
+  html {
+    font-size: 450%; } }
+
+@media only screen and (min-width: 320px) and (max-width: 375px) {
+  html {
+    font-size: 500%; } }
+
+@media only screen and (min-width: 376px) and (max-width: 639px) {
+  html {
+    font-size: 400%; } }
+
+@media only screen and (min-width: 640px) and (max-width: 900px) {
+  html {
+    font-size: 1200%; } }
+
+@media only screen and (min-width: 901px) {
+  html {
+    font-size: 1500%; } }

@@ -1,0 +1,117 @@
+@import "./temp/var.scss";
+@import "./temp/navbar.scss";
+body{
+	background-color: #f0f5f3;
+}
+.main{
+	top: 0.6rem;
+	position: fixed;
+	$filter_h:0.45;
+	bottom: 0rem;
+	.main-content{
+		padding-bottom: 0.22rem;
+	}
+	.msg_content{
+		.msg_list{
+			padding:0.2rem 0.2rem 0.2rem 0.2rem;
+			background-color: #ffffff;
+			margin:0.1rem 0px 0px 0px;
+			.msg_info{				
+				overflow: hidden;
+				$userinfo_h:0.6rem;				
+				.userinfo{	
+					float: left;				
+					.userphoto{
+						display: inline-block;
+						vertical-align: top;
+						height: $userinfo_h;
+						width: $userinfo_h;
+						border-radius: 50%;
+						overflow: hidden;				
+						img{
+							display: block;
+							height: $userinfo_h;
+							width: $userinfo_h;
+						}
+					}
+					.username{
+						display: inline-block;
+						vertical-align: top;
+						height: $userinfo_h;
+						line-height: $userinfo_h;
+						font-size: 0.18rem;
+						color:#22222e;
+					}
+				}
+				.pub_time{
+					float: right;
+					height: $userinfo_h;
+					line-height: $userinfo_h;
+					font-size: 0.16rem;
+					color: #a1a1b3;
+				}
+			}
+			.text_content{
+				margin-top:0.1rem;
+				p{
+					padding:0px 0px;
+					margin:0px 0px;
+					font-size: 0.18rem;
+					line-height: 0.24rem;
+					color:#333333;
+					.targetname{
+						color: #45e6b0;
+					}
+				}
+			}
+			.article{
+				margin-top:0.2rem;
+				padding:0.1rem 0.1rem;
+				background-color: #eeeeee;
+				$article_h:1.0rem;
+				.article_cover{
+					display: inline-block;
+					vertical-align: top;
+					position: relative;
+					img{
+						height: $article_h;
+						width: $article_h;
+					}
+					.cover{
+						position: absolute;
+						top:0px;
+						bottom: 0px;
+						left: 0px;
+						right: 0px;
+						background:url("#{$icon-img}zanting_sl.png") no-repeat center rgba(0,0,0,0.3);
+						background-size: $article_h*0.6 $article_h*0.6;
+					}
+				}
+				.title{
+					display: inline-block;
+					vertical-align: top;
+					padding:0px 0px 0px 0.1rem;					
+					h2{
+						white-space:nowrap; 
+						line-height: $article_h;
+						padding:0px 0px;
+						margin:0px 0px;
+						.theme{
+							white-space:nowrap;
+							display: inline;
+							font-size: 0.16rem;
+							color: #22222e;
+						}
+						p{
+							white-space:nowrap;
+							display: inline;
+							font-size: 0.16rem;
+							color:#818199;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@import "./temp/flex.scss";

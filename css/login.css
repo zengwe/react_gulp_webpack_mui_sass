@@ -1,0 +1,320 @@
+/*
+*@author zengw
+*@contect 584778883@qq.com
+*@time Thu Dec 01 2016 16:04:33 GMT+0800 (中国标准时间)
+*/
+.slideUp {
+  position: fixed;
+  width: 100%;
+  height: 0.6rem;
+  font-size: 0.18rem;
+  top: 0rem;
+  left: 0px;
+  background-color: red;
+  z-index: 199; }
+
+.slideDown {
+  position: fixed;
+  width: 100%;
+  height: 0.6rem;
+  font-size: 0.18rem;
+  bottom: -0.6rem;
+  left: 0px;
+  background-color: red;
+  z-index: 99; }
+
+.loadingBox {
+  width: 100%;
+  position: fixed;
+  top: 1rem;
+  z-index: 500; }
+
+.loadingBox div {
+  width: 1.2rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 0.16rem;
+  margin: 0px auto;
+  border-radius: 0.03rem; }
+
+body {
+  margin: 0px 0px;
+  padding: 0px 0px 0.3rem 0px; }
+
+.main {
+  position: relative;
+  z-index: 2;
+  padding: 0px 0px 0.8rem 0px; }
+  .main .photoarea {
+    display: block;
+    padding: 0.6rem 1.2rem 0.3rem 1.2rem; }
+    .main .photoarea .userphoto {
+      display: table;
+      overflow: hidden;
+      margin: 0px auto; }
+      .main .photoarea .userphoto img {
+        display: block;
+        height: 1.04rem;
+        width: 1.04rem;
+        border-radius: 50%; }
+  .main .input_area {
+    position: relative;
+    padding: 0px 0px; }
+    .main .input_area .hasline {
+      border-bottom: 1px solid #787780; }
+    .main .input_area .input_group {
+      display: block;
+      padding: 0.5rem 0.0rem 0.1rem 0.0rem;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      box-sizing: border-box; }
+      .main .input_area .input_group .help-icon {
+        background: url("../img/icon/login_bangzhu.png") no-repeat center;
+        height: 0.55rem;
+        width: 0.55rem;
+        position: absolute;
+        background-size: 0.3rem 0.3rem;
+        top: 0.3rem;
+        display: block;
+        right: 0.15rem; }
+      .main .input_area .input_group .user-icon {
+        background: url("../img/icon/name.png") no-repeat center;
+        height: 0.55rem;
+        width: 0.55rem;
+        position: absolute;
+        background-size: 0.3rem 0.3rem;
+        top: 0.3rem;
+        display: block;
+        left: 0.15rem; }
+      .main .input_area .input_group .phone-icon {
+        background: url("../img/icon/shouji.png") no-repeat center;
+        height: 0.55rem;
+        width: 0.55rem;
+        position: absolute;
+        background-size: 0.3rem 0.3rem;
+        top: 0.3rem;
+        display: block;
+        left: 0.15rem; }
+      .main .input_area .input_group .verity-icon {
+        background: url("../img/icon/yanzhengma.png") no-repeat center;
+        height: 0.55rem;
+        width: 0.55rem;
+        position: absolute;
+        background-size: 0.3rem 0.3rem;
+        top: 0.3rem;
+        display: block;
+        left: 0.15rem; }
+      .main .input_area .input_group .password-icon {
+        background: url("../img/icon/password.png") no-repeat center;
+        height: 0.55rem;
+        width: 0.55rem;
+        position: absolute;
+        background-size: 0.3rem 0.3rem;
+        top: 0.3rem;
+        display: block;
+        left: 0.15rem; }
+      .main .input_area .input_group .xia-sanjiao-icon {
+        background: url("../img/icon/diquxiala.png") no-repeat center;
+        height: 0.55rem;
+        width: 0.55rem;
+        position: absolute;
+        background-size: 0.3rem 0.3rem;
+        top: 0.3rem;
+        display: block;
+        right: 0.15rem; }
+      .main .input_area .input_group .sex-icon {
+        background: url("../img/icon/xingbiexuanze_zc.png") no-repeat center;
+        height: 0.55rem;
+        width: 0.55rem;
+        position: absolute;
+        background-size: 0.3rem 0.3rem;
+        top: 0.3rem;
+        display: block;
+        left: 0.15rem; }
+      .main .input_area .input_group .department-icon {
+        background: url("../img/icon/danwei_zc.png") no-repeat center;
+        height: 0.55rem;
+        width: 0.55rem;
+        position: absolute;
+        background-size: 0.3rem 0.3rem;
+        top: 0.3rem;
+        display: block;
+        left: 0.15rem; }
+      .main .input_area .input_group .motto-icon {
+        background: url("../img/icon/qianming_zc.png") no-repeat center;
+        height: 0.55rem;
+        width: 0.55rem;
+        position: absolute;
+        background-size: 0.3rem 0.3rem;
+        top: 0.3rem;
+        display: block;
+        left: 0.15rem; }
+      .main .input_area .input_group .getcode-btn {
+        display: block;
+        height: 0.7rem;
+        position: absolute;
+        z-index: 101;
+        right: 0px;
+        bottom: 0rem;
+        background-color: #22222e;
+        border: 0px none;
+        width: 1.6rem;
+        color: #ffffff;
+        font-size: 0.20rem; }
+        .main .input_area .input_group .getcode-btn:active {
+          outline: 0px none; }
+        .main .input_area .input_group .getcode-btn:focus {
+          outline: 0px none; }
+      .main .input_area .input_group input {
+        border: 0px none;
+        display: block;
+        height: 0.3rem;
+        background-color: transparent;
+        width: 100%;
+        padding: 0rem 0.65rem 0px 0.65rem;
+        box-sizing: border-box;
+        color: #ffffff;
+        letter-spacing: 0.02rem;
+        margin-bottom: 0px; }
+        .main .input_area .input_group input:active {
+          outline: 0px none; }
+        .main .input_area .input_group input:focus {
+          outline: 0px none; }
+      .main .input_area .input_group .err {
+        display: none;
+        position: absolute;
+        height: 0.28rem;
+        width: 0.28rem;
+        right: 0.2rem;
+        top: 0.23rem;
+        background: url("../img/icon/cuowutishi.png") no-repeat center;
+        background-size: 0.26rem  0.26rem;
+        overflow: visible; }
+        .main .input_area .input_group .err .triangle {
+          width: 0;
+          height: 0;
+          border-left: 0.05rem solid transparent;
+          border-right: 0.05rem solid transparent;
+          border-bottom: 0.1rem solid #3d3d4d;
+          display: block;
+          position: absolute;
+          top: 0.28rem;
+          right: 0.09rem; }
+        .main .input_area .input_group .err .notice_text {
+          display: block;
+          position: absolute;
+          word-break: keep-all;
+          white-space: nowrap;
+          top: 0.38rem;
+          right: 0rem;
+          background-color: #3d3d4d;
+          color: #a1a1b3;
+          border-radius: 0.03rem;
+          font-size: 0.14rem;
+          padding: 0.01rem 0.06rem; }
+      .main .input_area .input_group .remmenber {
+        display: block;
+        float: left;
+        font-size: 0px;
+        margin-left: 0.3rem; }
+        .main .input_area .input_group .remmenber .button-icon {
+          display: inline-block;
+          vertical-align: top;
+          height: 0.24rem;
+          width: 0.24rem;
+          background: url("../img/icon/jizhumima_y.png") no-repeat center;
+          background-size: 0.22rem 0.22rem; }
+        .main .input_area .input_group .remmenber .selected {
+          background: url("../img/icon/jizhumima_w.png") no-repeat center;
+          background-size: 0.22rem 0.22rem; }
+        .main .input_area .input_group .remmenber span {
+          font-size: 0.18rem;
+          color: #9b9aab;
+          line-height: 0.24rem;
+          display: inline-block;
+          vertical-align: top;
+          text-indent: 0.1rem; }
+      .main .input_area .input_group .regist_link {
+        display: block;
+        float: right;
+        font-size: 0px;
+        margin-right: 0.3rem; }
+        .main .input_area .input_group .regist_link a {
+          font-size: 0.18rem;
+          color: #9b9aab;
+          line-height: 0.24rem; }
+      .main .input_area .input_group .submit_btn {
+        display: block;
+        border: 0px none;
+        width: 4rem;
+        margin: 0px auto 0px auto;
+        height: 0.6rem;
+        background-color: #22222e;
+        color: #ffffff;
+        border-radius: 0.6rem;
+        font-size: 0.20rem; }
+        .main .input_area .input_group .submit_btn:active {
+          outline: 0px none; }
+        .main .input_area .input_group .submit_btn:focus {
+          outline: 0px none; }
+  .main .wechatloginarea {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0.0rem;
+    left: 0px;
+    height: 1px;
+    z-index: 101; }
+    .main .wechatloginarea .wechat_btn {
+      display: table;
+      border: 0px none;
+      background-color: transparent;
+      font-size: 0.20rem;
+      color: #9b9aab;
+      padding: 0px 0px 0px 0.45rem;
+      background: url("../img/icon/wechat.png") no-repeat 0rem 0.05rem;
+      background-size: 0.4rem 0.4rem;
+      height: 0.5rem;
+      line-height: 0.5rem;
+      position: relative;
+      top: -0.25rem;
+      margin: 0px auto; }
+      .main .wechatloginarea .wechat_btn:active {
+        outline: 0px none; }
+      .main .wechatloginarea .wechat_btn:focus {
+        outline: 0px none; }
+
+.bg_style {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: url("../img/icon/login_bg.png");
+  right: 0px;
+  bottom: 0px;
+  z-index: 1; }
+
+@media only screen and (max-width: 319px) {
+  html {
+    font-size: 450%; } }
+
+@media only screen and (min-width: 320px) and (max-width: 375px) {
+  html {
+    font-size: 500%; } }
+
+@media only screen and (min-width: 376px) and (max-width: 639px) {
+  html {
+    font-size: 400%; } }
+
+@media only screen and (min-width: 640px) and (max-width: 900px) {
+  html {
+    font-size: 1200%; } }
+
+@media only screen and (min-width: 901px) {
+  html {
+    font-size: 1500%; } }

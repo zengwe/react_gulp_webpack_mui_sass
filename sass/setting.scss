@@ -1,0 +1,57 @@
+@import "./temp/var.scss";
+@import "./temp/navbar.scss";
+body{
+	background-color: #f0f5f3;
+}
+.main{
+	top: 0.6rem;
+	position: fixed;
+	$filter_h:0.45;
+	background-color: #ffffff;
+	box-sizing:border-box;
+	border-top:0.1rem solid #f0f5f3;
+	.set_list{
+		padding:0px 0px;
+		margin:0px 0px;
+		li{
+			display: block;
+			padding:0px 0px;
+			margin:0px 0px;
+			border-bottom: 1px solid #eeeeee;
+		}
+		$list_item_h:0.8rem;
+		$font-indent:0.7rem;
+		@mixin list_item_fontstyle($color){
+			height: $list_item_h;
+			line-height: $list_item_h;
+			color: #{$color};
+			font-size: 0.20rem;
+		}
+		.set_item{
+			@include list_item_fontstyle("#333333");
+			text-indent: $font-indent;
+		}
+		@mixin list_bg($icon_name){
+			$bg_size:0.26rem;
+			background: url("#{$icon-img}#{$icon_name}") no-repeat 0.28rem $list_item_h/2-$bg_size/2;
+			background-size: $bg_size $bg_size;
+		}
+		.newmsg{
+			@include list_bg("xiaoxishezhi.png");
+		}
+		.remove_catch{
+			@include list_bg("huancun.png");
+		}
+		.check_version{
+			@include list_bg("gengxin.png");
+		}
+		.feedback{
+			@include list_bg("bangzhufanhui.png");
+		}
+		.loginout{
+			@include list_item_fontstyle("#45e6b0");
+			text-align: center;
+		}
+	}
+}
+@import "./temp/flex.scss";

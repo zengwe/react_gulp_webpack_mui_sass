@@ -1,0 +1,65 @@
+.header{
+	height: 0.6rem;
+	position: fixed;
+	z-index: 200;
+	background-color: #646371;
+	text-align: center;
+	line-height: 0.6rem;
+	top:0px;
+	width: 100%;
+	p{
+		color:#ffffff;
+		font-size: 0.24rem;
+		margin:0px 0px;
+	}
+	@mixin left{
+		height: 0.6rem;
+		width: 0.6rem;
+		display: block;
+		position: absolute;
+		top:0px;
+		background-size: 0.35rem 0.35rem;
+	}
+	.left-back-icon{
+		background:url("#{$icon-img}fanhui.png") no-repeat center;
+		left: 0px;
+		@include left;		
+	}
+	.left-map-icon{
+		background:url("#{$icon-img}fanhui.png") no-repeat center;
+		left: 0px;
+		@include left;
+	}
+	.right-filter-icon{
+		background:url("#{$icon-img}shaixuan.png") no-repeat center;
+		@include left;
+		right:0px;		
+	}
+	.right-share-icon{
+		background:url("#{$icon-img}fenxiang.png") no-repeat center;
+		@include left;
+		right:0px;		
+	}
+	@mixin text{
+		@include left;
+		right:0px;
+		font-size: 0.16rem;
+		color:#ffffff;
+	}
+	.text_fabu{
+		@include text;		
+		&:before{
+			content:"发布";
+			display: block;
+			font-style:normal;
+		}
+	}
+	.text_queren{
+		@include text;		
+		&:before{
+			content:"确认";
+			display: block;
+			font-style:normal;
+		}
+	}	
+}

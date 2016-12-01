@@ -1,0 +1,198 @@
+/*
+*@author zengw
+*@contect 584778883@qq.com
+*@time Thu Dec 01 2016 16:04:33 GMT+0800 (中国标准时间)
+*/
+@charset "UTF-8";
+.slideUp {
+  position: fixed;
+  width: 100%;
+  height: 0.6rem;
+  font-size: 0.18rem;
+  top: 0rem;
+  left: 0px;
+  background-color: red;
+  z-index: 199; }
+
+.slideDown {
+  position: fixed;
+  width: 100%;
+  height: 0.6rem;
+  font-size: 0.18rem;
+  bottom: -0.6rem;
+  left: 0px;
+  background-color: red;
+  z-index: 99; }
+
+.loadingBox {
+  width: 100%;
+  position: fixed;
+  top: 1rem;
+  z-index: 500; }
+
+.loadingBox div {
+  width: 1.2rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 0.16rem;
+  margin: 0px auto;
+  border-radius: 0.03rem; }
+
+.header {
+  height: 0.6rem;
+  position: fixed;
+  z-index: 200;
+  background-color: #646371;
+  text-align: center;
+  line-height: 0.6rem;
+  top: 0px;
+  width: 100%; }
+  .header p {
+    color: #ffffff;
+    font-size: 0.24rem;
+    margin: 0px 0px; }
+  .header .left-back-icon {
+    background: url("../img/icon/fanhui.png") no-repeat center;
+    left: 0px;
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem; }
+  .header .left-map-icon {
+    background: url("../img/icon/fanhui.png") no-repeat center;
+    left: 0px;
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem; }
+  .header .right-filter-icon {
+    background: url("../img/icon/shaixuan.png") no-repeat center;
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem;
+    right: 0px; }
+  .header .right-share-icon {
+    background: url("../img/icon/fenxiang.png") no-repeat center;
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem;
+    right: 0px; }
+  .header .text_fabu {
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem;
+    right: 0px;
+    font-size: 0.16rem;
+    color: #ffffff; }
+    .header .text_fabu:before {
+      content: "发布";
+      display: block;
+      font-style: normal; }
+  .header .text_queren {
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem;
+    right: 0px;
+    font-size: 0.16rem;
+    color: #ffffff; }
+    .header .text_queren:before {
+      content: "确认";
+      display: block;
+      font-style: normal; }
+
+.main {
+  top: 0.6rem;
+  position: fixed;
+  bottom: 0rem;
+  width: 100%;
+  background-color: #ffffff; }
+  .main .inputarea .input_row {
+    position: relative;
+    border-bottom: 1px solid #eeeeee;
+    padding: 0.12rem 0px; }
+    .main .inputarea .input_row .input_box {
+      display: block;
+      height: 0.4rem;
+      border-left: 0px none;
+      border-top: 0px none;
+      border-right: 0px none;
+      border-bottom: 0px none;
+      margin: 0px 0px 0px 0px;
+      padding: 0px 0px 0px 0px;
+      text-indent: 0.2rem;
+      font-size: 0.20rem;
+      color: #22222e;
+      box-sizing: border-box;
+      padding-right: 0.4rem; }
+      .main .inputarea .input_row .input_box:focus {
+        outline: 0px none; }
+      .main .inputarea .input_row .input_box:active {
+        outline: 0px none; }
+    .main .inputarea .input_row .remove_all {
+      display: block;
+      position: absolute;
+      height: 0.4rem;
+      width: 0.4rem;
+      top: 0.12rem;
+      right: 0px;
+      background: url("../img/icon/chongzhi.png") no-repeat center;
+      background-size: 0.35rem 0.35rem; }
+  .main .inputarea .result {
+    overflow: hidden; }
+    .main .inputarea .result span {
+      display: block;
+      float: right;
+      color: #8f8fb3;
+      font-size: 0.14rem;
+      margin-right: 0.1rem;
+      margin-top: 0.05rem; }
+  .main .inputarea .search_list {
+    display: block;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    background-color: #f5f5fa; }
+    .main .inputarea .search_list li {
+      display: block;
+      height: 0.5rem;
+      line-height: 0.5rem;
+      border-bottom: 0.01rem solid #eeeeee;
+      text-indent: 0.6rem;
+      font-size: 0.16rem; }
+
+@media only screen and (max-width: 319px) {
+  html {
+    font-size: 450%; } }
+
+@media only screen and (min-width: 320px) and (max-width: 375px) {
+  html {
+    font-size: 500%; } }
+
+@media only screen and (min-width: 376px) and (max-width: 639px) {
+  html {
+    font-size: 400%; } }
+
+@media only screen and (min-width: 640px) and (max-width: 900px) {
+  html {
+    font-size: 1200%; } }
+
+@media only screen and (min-width: 901px) {
+  html {
+    font-size: 1500%; } }

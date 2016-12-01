@@ -1,0 +1,417 @@
+/*
+*@author zengw
+*@contect 584778883@qq.com
+*@time Thu Dec 01 2016 16:04:33 GMT+0800 (中国标准时间)
+*/
+@charset "UTF-8";
+.slideUp {
+  position: fixed;
+  width: 100%;
+  height: 0.6rem;
+  font-size: 0.18rem;
+  top: 0rem;
+  left: 0px;
+  background-color: red;
+  z-index: 199; }
+
+.slideDown {
+  position: fixed;
+  width: 100%;
+  height: 0.6rem;
+  font-size: 0.18rem;
+  bottom: -0.6rem;
+  left: 0px;
+  background-color: red;
+  z-index: 99; }
+
+.loadingBox {
+  width: 100%;
+  position: fixed;
+  top: 1rem;
+  z-index: 500; }
+
+.loadingBox div {
+  width: 1.2rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 0.16rem;
+  margin: 0px auto;
+  border-radius: 0.03rem; }
+
+.header {
+  height: 0.6rem;
+  position: fixed;
+  z-index: 200;
+  background-color: #646371;
+  text-align: center;
+  line-height: 0.6rem;
+  top: 0px;
+  width: 100%; }
+  .header p {
+    color: #ffffff;
+    font-size: 0.24rem;
+    margin: 0px 0px; }
+  .header .left-back-icon {
+    background: url("../img/icon/fanhui.png") no-repeat center;
+    left: 0px;
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem; }
+  .header .left-map-icon {
+    background: url("../img/icon/fanhui.png") no-repeat center;
+    left: 0px;
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem; }
+  .header .right-filter-icon {
+    background: url("../img/icon/shaixuan.png") no-repeat center;
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem;
+    right: 0px; }
+  .header .right-share-icon {
+    background: url("../img/icon/fenxiang.png") no-repeat center;
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem;
+    right: 0px; }
+  .header .text_fabu {
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem;
+    right: 0px;
+    font-size: 0.16rem;
+    color: #ffffff; }
+    .header .text_fabu:before {
+      content: "发布";
+      display: block;
+      font-style: normal; }
+  .header .text_queren {
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem;
+    right: 0px;
+    font-size: 0.16rem;
+    color: #ffffff; }
+    .header .text_queren:before {
+      content: "确认";
+      display: block;
+      font-style: normal; }
+
+body {
+  background-color: #f0f5f3; }
+
+.main {
+  top: 0.6rem;
+  position: fixed;
+  bottom: 0rem; }
+  .main .main-content {
+    padding-bottom: 0.22rem; }
+
+.main-list .article_info {
+  border-top: 1px solid #eeeeee;
+  padding-left: 0.1rem; }
+  .main-list .article_info .time {
+    display: inline-block;
+    vertical-align: top;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    color: #a1a1b3;
+    font-size: 0.14rem;
+    padding-left: 0.3rem;
+    background: url("../img/icon/shijian_hui.png") no-repeat 0rem 0.15rem;
+    background-size: 0.2rem 0.2rem; }
+  .main-list .article_info .respone {
+    display: inline-block; }
+    .main-list .article_info .respone div {
+      display: inline-block;
+      height: 0.5rem;
+      line-height: 0.5rem;
+      font-size: 0.16rem;
+      color: #3d3d4d;
+      padding-left: 0.3rem;
+      margin-left: 0.15rem; }
+    .main-list .article_info .respone .comments {
+      background: url("../img/icon/ding_w.png") no-repeat 0rem 0.13rem;
+      background-size: 0.24rem 0.24rem; }
+    .main-list .article_info .respone .liked {
+      background: url("../img/icon/huifu.png") no-repeat 0rem 0.13rem;
+      background-size: 0.24rem 0.24rem; }
+  .main-list .article_info .handle {
+    display: inline-block;
+    vertical-align: top; }
+    .main-list .article_info .handle a {
+      display: inline-block;
+      height: 0.5rem;
+      width: 0.5rem; }
+    .main-list .article_info .handle .share {
+      background: url("../img/icon/fenxian_dt.png") no-repeat center;
+      background-size: 0.3rem 0.3rem; }
+    .main-list .article_info .handle .remove {
+      background: url("../img/icon/shanchu_dt.png") no-repeat center;
+      background-size: 0.3rem 0.3rem; }
+
+.footclass {
+  height: 0.6rem;
+  /*padding-top: 0.2rem;*/
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  position: fixed;
+  z-index: 100;
+  display: block;
+  font-size: 0px;
+  background-color: #ffffff; }
+  .footclass .grid {
+    background-color: #22222e;
+    height: 0.6rem;
+    width: 33.333%;
+    display: inline-block;
+    vertical-align: bottom;
+    height: 0.6rem;
+    position: relative;
+    top: 0rem;
+    box-sizing: border-box;
+    /*overflow: visible;*/ }
+  .footclass .home {
+    background: url("../img/icon/zhuyeweixuan.png") no-repeat center #22222e;
+    background-size: 0.3rem 0.3rem; }
+  .footclass .homeact {
+    background: url("../img/icon/zhuyeyuanzhong.png") no-repeat center #22222e;
+    background-size: 0.3rem 0.3rem; }
+  .footclass .personal {
+    background: url("../img/icon/gerenzhongxin_w.png") no-repeat center #22222e;
+    background-size: 0.3rem 0.3rem; }
+  .footclass .personalact {
+    background: url("../img/icon/gerenzhongxin_x.png") no-repeat center #22222e;
+    background-size: 0.3rem 0.3rem; }
+  .footclass .middl {
+    display: block;
+    position: relative;
+    bottom: 0px;
+    height: 0.6rem;
+    width: 0.6rem;
+    top: -0rem;
+    margin: 0px auto; }
+
+.main-list {
+  position: relative;
+  padding: 0.2rem 0.2rem 0rem 0.2rem;
+  background-color: #ffffff;
+  margin: 0.1rem 0px 0px 0px; }
+  .main-list .content-info {
+    overflow: hidden;
+    height: 0.5rem; }
+    .main-list .content-info:after {
+      display: block;
+      clear: both; }
+    .main-list .content-info .userinfo {
+      height: 0.5rem;
+      display: block;
+      float: left; }
+      .main-list .content-info .userinfo .user-photo {
+        border: 0px none;
+        display: inline-block;
+        vertical-align: top;
+        height: 0.5rem;
+        width: 0.5rem;
+        border-radius: 50%; }
+      .main-list .content-info .userinfo .text-info {
+        display: inline-block;
+        vertical-align: top;
+        height: 0.5rem; }
+        .main-list .content-info .userinfo .text-info .nike-name {
+          display: block;
+          height: 0.3rem;
+          line-height: 0.3rem;
+          font-size: 0.16rem;
+          color: #22222e; }
+        .main-list .content-info .userinfo .text-info .pub-time {
+          display: block;
+          height: 0.2rem;
+          line-height: 0.2rem;
+          font-size: 0.12rem;
+          color: #a1a1b3; }
+    .main-list .content-info .response {
+      height: 0.5rem;
+      display: block;
+      float: right; }
+      .main-list .content-info .response .comments {
+        background: url("../img/icon/huifu.png") no-repeat 0rem 0.14rem;
+        display: inline-block;
+        vertical-align: top;
+        font-size: 0.14rem;
+        color: #3d3d4d;
+        height: 0.5rem;
+        line-height: 0.5rem;
+        padding: 0px 0.1rem 0px 0.3rem;
+        background-size: 0.22rem 0.22rem; }
+      .main-list .content-info .response .likes {
+        background: url("../img/icon/ding_w.png") no-repeat 0rem 0.14rem;
+        display: inline-block;
+        vertical-align: top;
+        font-size: 0.14rem;
+        color: #3d3d4d;
+        height: 0.5rem;
+        line-height: 0.5rem;
+        padding: 0px 0.1rem 0px 0.3rem;
+        background-size: 0.22rem 0.22rem; }
+  .main-list .article {
+    position: relative; }
+    .main-list .article .text-desc {
+      padding: 0.1rem 0px 0.15rem 0px; }
+      .main-list .article .text-desc .contenttext {
+        font-size: 0.16rem;
+        line-height: 0.25rem;
+        color: #22222e;
+        display: inline; }
+        .main-list .article .text-desc .contenttext .theme-title {
+          color: #45e6b0; }
+      .main-list .article .text-desc .sounds .status {
+        display: inline-block;
+        vertical-align: top;
+        height: 0.3rem;
+        width: 1.0rem;
+        background-color: #b8b8cc;
+        border-radius: 0.15rem; }
+        .main-list .article .text-desc .sounds .status img {
+          height: 0.2rem;
+          width: 0.2rem;
+          position: relative;
+          top: 0.05rem;
+          left: 0.1rem; }
+      .main-list .article .text-desc .sounds .sounds-time {
+        display: inline-block;
+        height: 0.3rem;
+        line-height: 0.3rem;
+        vertical-align: top;
+        font-size: 0.14rem;
+        margin-left: 0.1rem;
+        color: #b8b8cc; }
+    .main-list .article .relation-imgs {
+      font-size: 0px;
+      border-bottom: 1px solid #eeeeee;
+      padding-bottom: 0.1rem; }
+      .main-list .article .relation-imgs .img-col3-mar {
+        width: 32%;
+        display: inline-block;
+        margin-right: 2%;
+        height: 1.5rem; }
+        .main-list .article .relation-imgs .img-col3-mar:nth-child(3n) {
+          margin-right: 0%; }
+      .main-list .article .relation-imgs .img-col1-mar {
+        width: 100%;
+        height: 1.5rem; }
+      .main-list .article .relation-imgs .img-col2-mar {
+        width: 49%;
+        display: inline-block;
+        margin-right: 2%;
+        height: 1.5rem; }
+        .main-list .article .relation-imgs .img-col2-mar:nth-child(2n) {
+          margin-right: 0%; }
+      .main-list .article .relation-imgs .video {
+        width: 100%;
+        height: 100%;
+        padding: 0px 0px;
+        margin: 0px 0px; }
+    .main-list .article .controls {
+      display: none;
+      padding: 0px 0px 0px 0px;
+      margin: 0px 0px 0px 0px;
+      -webkit-margin-before: 0px;
+      height: 0.3rem;
+      font-size: 0px;
+      background-color: rgba(0, 0, 0, 0.3);
+      position: absolute;
+      width: 100%;
+      bottom: 0.25rem; }
+      .main-list .article .controls .play {
+        display: inline-block;
+        vertical-align: top;
+        width: 15%;
+        height: 0.3rem;
+        background: url("../img/icon/luyinzanting.png") no-repeat center;
+        background-size: 0.2rem 0.2rem; }
+      .main-list .article .controls .progress {
+        display: inline-block;
+        vertical-align: middle;
+        width: 70%;
+        height: 0.04rem;
+        background-color: #ffffff;
+        position: relative;
+        top: 0.03rem; }
+        .main-list .article .controls .progress .line {
+          display: block;
+          height: inherit;
+          width: 0.0rem;
+          position: relative;
+          background-color: #45e6b0; }
+          .main-list .article .controls .progress .line .point {
+            position: absolute;
+            top: -0.04rem;
+            right: 0px;
+            background-color: #45e6b0;
+            height: 0.12rem;
+            width: 0.12rem;
+            border-radius: 50%;
+            overflow: hidden; }
+      .main-list .article .controls .time {
+        display: inline-block;
+        vertical-align: top;
+        width: 15%;
+        height: 0.3rem;
+        color: #ffffff;
+        font-size: 0.14rem;
+        line-height: 0.3rem;
+        padding: 0px 0px 0px 0.1rem;
+        box-sizing: border-box; }
+    .main-list .article:hover .controls {
+      display: block; }
+  .main-list .pub-positon {
+    height: 0.5rem;
+    line-height: 0.5rem;
+    font-size: 0.14rem;
+    color: #a1a1b3;
+    padding: 0px 0px 0px 0.4rem;
+    background: url("../img/icon/dingwei.png") no-repeat 0.1rem 0.125rem;
+    background-size: 0.25rem 0.25rem; }
+
+@media only screen and (max-width: 319px) {
+  html {
+    font-size: 450%; } }
+
+@media only screen and (min-width: 320px) and (max-width: 375px) {
+  html {
+    font-size: 500%; } }
+
+@media only screen and (min-width: 376px) and (max-width: 639px) {
+  html {
+    font-size: 400%; } }
+
+@media only screen and (min-width: 640px) and (max-width: 900px) {
+  html {
+    font-size: 1200%; } }
+
+@media only screen and (min-width: 901px) {
+  html {
+    font-size: 1500%; } }

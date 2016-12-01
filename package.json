@@ -1,0 +1,35 @@
+{
+  "name": "hangxun",
+  "version": "1.0.110",
+  "description": "gulp",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zengw",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "es6-promise": "^4.0.5",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-file-include": "^1.0.0",
+    "gulp-header": "^1.8.8",
+    "gulp-if": "^2.0.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-react": "^3.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-webpack": "^1.5.0",
+    "header": "^0.1.1",
+    "util": "^0.10.3",
+    "webpack": "^1.13.3"
+  },
+  "header": {
+    "name": "zengw",
+    "contect": "584778883@qq.com"
+  }
+}

@@ -1,0 +1,75 @@
+@import "./temp/var.scss";
+@import "./temp/navbar.scss";
+.main{
+	top: 0.6rem;
+	position: fixed;
+	$filter_h:0.45;
+	// overflow-y:scroll;
+	bottom: 0rem;	
+	width: 100%;
+	background-color: #ffffff;
+	.userinfocontent{
+		ul{
+			display: block;
+			padding:0px 0px 0px 0px;
+			margin:0px 0px 0px 0px;
+			width: 100%;
+			li{
+				display: block;
+				padding:0.2rem 0.3rem 0.2rem 0.3rem;
+				margin:0px 0px 0px 0px;
+				overflow: hidden;
+				width: 100%;
+				border-bottom: 1px solid #eeeeee;
+				.title{
+					display: block;
+					float: left;
+					color:#333333;
+					line-height: 0.3rem;
+				}
+				.content{
+					display: block;
+					float: right;
+					padding-right: 0.2rem;
+					position: relative;
+					//height: 0.3rem;
+					line-height: 0.3rem;
+					.userphoto{
+						display: block;
+						height: 0.8rem;
+						height: 0.8rem;
+						border-radius: 50%;
+					}
+					p{
+						margin:0px 0px 0px 0px;
+						color:#a1a1b3;
+					}
+					.right_icon{
+						display: block;
+						position: absolute;
+						height: 0.34rem;
+						top:-0.02rem;
+						right: -0.1rem;
+						width: 0.34rem;
+						background: url("#{$icon-img}kexuanze.png") no-repeat center;
+						background-size: 0.25rem 0.25rem;
+					}
+				}
+								
+			}
+			.special{
+				padding:0.1rem 0.3rem 0.1rem 0.3rem;
+				line-height: 0.8rem;
+				.title{
+					line-height: 0.8rem;
+				}
+				.content{
+					.right_icon{
+						top:0.2rem;
+					}
+				}
+			}
+		}
+	}
+}
+@import "./temp/flex.scss";

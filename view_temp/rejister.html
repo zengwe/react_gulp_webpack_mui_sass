@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    @@include('common/head.html',{"name":"name"})    
+    <link href="../css/rejister.css" rel="stylesheet"/>
+</head>
+<body>
+	@@include('common/navbar.html',{"name":"注册","left":"left-back-icon"})
+	<div class="main">
+		<div class="input_area">
+			<div class="input_group hasline">
+				<i class="icon phone-icon"></i>
+				<input type="number" class="input_box" id="phone" placeholder="手机号">
+				<div class="err">
+					<i class="triangle"></i>
+					<div class="notice_text">手机号码错误</div>
+				</div>				
+			</div>
+			<div class="input_group hasline">
+				<i class="icon verity-icon"></i>
+				<input type="text" id="code" class="input_box" placeholder="验证码">
+				<div class="err" style="right:1.6rem">
+					<i class="triangle"></i>
+					<div class="notice_text">验证码错误</div>
+				</div>					
+				<button class="getcode-btn">发送验证码</button>	
+			</div>
+			<div class="input_group hasline">
+				<i class="icon password-icon"></i>
+				<input type="text" id="password" class="input_box" placeholder="密码">
+				<div class="err">
+					<i class="triangle"></i>
+					<div class="notice_text">密码需大于6位</div>
+				</div>					
+			</div>
+			<div class="input_group hasline">
+				<i class="icon password-icon"></i>
+				<input type="text" id="repassword" class="input_box" placeholder="确认密码">
+				<div class="err">
+					<i class="triangle"></i>
+					<div class="notice_text">前后密码不一致</div>
+				</div>					
+			</div>	
+			<div class="agree">
+				<span>你已同意本产品的用户协议与权限</span>
+			</div>					
+			<div class="input_group">
+				<button class="submit_btn">下一步</button>
+			</div>			
+		</div>
+	</div>
+	<div class="bg_style"></div>
+	<script src="../js/config.js"></script>
+	<script src="../js/rejister.js"></script>
+</body>
+</html>

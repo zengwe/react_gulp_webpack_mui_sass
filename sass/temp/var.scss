@@ -1,0 +1,114 @@
+$width: 5em;
+$icon-img: "../img/icon/";
+$body_bg-color:#f0f5f3;
+%btn{
+	text-align: center;
+	&:active{
+		outline: 0px none;
+	}
+	&:focus{
+		outline: 0px none;
+	}
+}
+@mixin pub_input{
+	&:active{
+		outline: 0px none;
+	}
+	&:focus{
+		outline: 0px none;
+		}
+}
+@mixin noborder-input{
+	@include pub_input;
+	border:0px none;
+}
+@mixin footerclass{
+.footclass{
+	height: 0.6rem;
+	/*padding-top: 0.2rem;*/
+	left:0px;
+	right: 0px;
+	bottom: 0px;
+	position: fixed;
+	z-index: 100;
+	display: block;			
+	font-size: 0px;
+	background-color: #ffffff;
+	.grid{
+		background-color: #22222e;
+		height: 0.6rem;
+		width: 33.333%;
+		display: inline-block;
+		vertical-align: bottom;
+		height: 0.6rem;
+		position: relative;
+		top:0rem;
+		box-sizing:border-box;
+		/*overflow: visible;*/
+	}
+	.home{
+		background: url("#{$icon-img}zhuyeweixuan.png") no-repeat center #22222e;
+		background-size: 0.3rem 0.3rem;
+	}
+	.homeact{
+		background: url("#{$icon-img}zhuyeyuanzhong.png") no-repeat center #22222e;
+		background-size: 0.3rem 0.3rem;
+	}		
+	.personal{
+		background: url("#{$icon-img}gerenzhongxin_w.png") no-repeat center #22222e;
+		background-size: 0.3rem 0.3rem;
+	}
+	.personalact{
+		background: url("#{$icon-img}gerenzhongxin_x.png") no-repeat center #22222e;
+		background-size: 0.3rem 0.3rem;
+	}
+	.middl{
+
+		display: block;
+		position: relative;
+		bottom: 0px;
+		height: 0.6rem;
+		width: 0.6rem;
+		top:-0rem;
+		margin:0px auto;
+	}	
+}	
+}
+//上下拉刷新
+.slideUp{
+	position: fixed;
+	width: 100%;
+	height: 0.6rem;
+	font-size: 0.18rem;
+	top:0rem;
+	left: 0px;
+	background-color: red;
+	z-index: 199;
+}
+.slideDown{
+	position: fixed;
+	width: 100%;
+	height: 0.6rem;
+	font-size: 0.18rem;
+	bottom:-0.6rem;
+	left: 0px;
+	background-color: red;
+	z-index: 99;
+}
+.loadingBox{
+	//height: 0.6rem;
+	width: 100%;
+	position: fixed;
+	top:1rem;
+	z-index: 500;
+}
+.loadingBox div{
+	width: 1.2rem;
+	height: 0.4rem;
+	line-height: 0.4rem;
+	background-color: rgba(0,0,0,0.2);
+	text-align: center;
+	font-size: 0.16rem;
+	margin:0px auto;
+	border-radius: 0.03rem;
+}

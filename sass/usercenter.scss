@@ -1,0 +1,146 @@
+@import "./temp/var.scss";
+@import "./temp/navbar.scss";
+.main{
+	background-color: #ffffff;
+	.userinfo{
+		background-color: #525267;
+		padding:0.6rem 0px 0.4rem 0px;
+		.userimg{
+			display: table;
+			margin:0px auto;
+			img{
+				display: block;
+				height: 1.2rem;
+				width: 1.2rem;
+				border-radius: 50%;
+			}			
+		}
+		.nickname_area{
+			display: table;
+			margin:0.1rem auto;
+			$nickname_area_height:0.3rem;
+			@mixin text_style(){
+				text-align: center;
+				font-size: 0.22rem;
+				color: #ffffff;	
+				letter-spacing: 0.02rem;															
+			}
+			.nickname{
+				height:$nickname_area_height;
+				line-height:$nickname_area_height;
+				display: block;
+				margin:0.1rem 0px 0px 0px;
+				position: relative;
+				p{
+					@include text_style;					
+				}
+
+				@mixin sex($sex){
+					height: $nickname_area_height;
+					width: $nickname_area_height;
+					display: block;
+					position: absolute;
+					top:0px;
+					right:-$nickname_area_height;
+					background: url("#{$icon-img}#{$sex}") no-repeat center;
+					background-size: $nickname_area_height*0.7 $nickname_area_height*0.7;
+				}
+				.man{
+					@include sex("nan.png");
+				}
+				.male{
+					@include sex("nv.png");
+				}				
+			}
+			.work_desc{
+				height:$nickname_area_height;
+				line-height:$nickname_area_height;				
+				position: relative;
+				p{
+					@include text_style;
+					color:#b8b8cc;
+					font-size: 0.16rem;
+					text-indent: $nickname_area_height;					
+				}
+				.work{
+					height: $nickname_area_height;
+					width: $nickname_area_height;
+					display: block;
+					position: absolute;
+					top:0px;
+					left:0px;
+					background: url("#{$icon-img}danwei_gr.png") no-repeat center;
+					background-size: $nickname_area_height*0.7 $nickname_area_height*0.7;					
+				}
+			}
+
+		}
+		.motto{
+			margin-top:0.18rem;
+			text-align: center;
+			p{
+				font-size: 0.16rem;
+				color:#b8b8cc;
+			}
+		}				
+	}
+	.list{
+		display: block;
+		width: 100%;
+		$list_h:0.8rem;
+		padding:0px 0px 0px 0px;
+		margin:0px 0px 0px 0px;
+		border-top:0.1rem solid #f0f5f3;
+		li{
+			display: block;
+			position: relative;
+			height: $list_h;
+			border-bottom: 1px solid #eeeeee;
+			@mixin right_icon($imgname){
+				display: block;
+				position: absolute;
+				$bian:$list_h*3/5;
+				height: $bian;
+				width: $bian;
+				top:$list_h/2-$bian/2;
+				left: $list_h/4;
+				background: url("#{$icon-img}#{$imgname}") no-repeat center;
+				background-size: 0.9*$bian 0.9*$bian;
+			}			
+			p{
+				line-height: $list_h;
+				margin:0px 0px 0px 0px;
+				font-size: 0.22rem;
+				color:#333333;
+				display: inline-block;
+				height: $list_h;
+				margin-left: 0.75rem;
+				vertical-align: top;
+			}
+			.right_icon_trends{
+				@include right_icon("dongtai_ic.png");
+			}
+			.right_icon_mymsg{
+				@include right_icon("xiaoxi_ic.png");
+			}
+			.right_icon_sysseting{
+				@include right_icon("shezhi_ic.png");
+			}
+			.msg_num{
+				display: inline-block;
+				background-color: #ff0363;
+				position: relative;
+				height: 0.24rem;
+				text-align: center;
+				min-width: 0.24rem;
+				border-radius: 0.24rem;
+				top: $list_h/2-0.12;
+				color:#ffffff;
+				font-size: 0.12rem;
+				vertical-align: top;
+			}						
+		}
+	}
+}
+@include footerclass;
+@import "./temp/flex.scss"

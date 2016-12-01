@@ -1,0 +1,66 @@
+@import "./temp/var.scss";
+@import "./temp/navbar.scss";
+body{
+	background-color: #f0f5f3;
+}
+.main{
+	top: 0.6rem;
+	position: fixed;
+	$filter_h:0.45;
+	// overflow-y:scroll;
+	bottom: 0.6rem;
+	.nav-filter{
+		height: $filter_h+rem;
+		position: relative;
+		overflow: hidden;
+		background-color: #ffffff;
+		.position{
+			height: $filter_h+rem;
+			line-height: $filter_h+rem;
+			position: absolute;
+			top:0px;
+			left: 0px;
+			padding:0px 0.3rem 0rem 0.2rem;
+			font-size:0.16rem;			
+			.icon-down{
+				background:url("#{$icon-img}diquxiala.png") no-repeat center;
+				background-size: 0.2rem 0.2rem;
+				display: block;
+				position: absolute;
+				right: 0px;
+				height: 0.2rem;
+				width: 0.2rem;
+				top:0.11rem;
+			}
+			a{
+				color:#a1a1b3;
+			}			
+		}
+		.sort-way{
+			display: table;
+			margin:0px auto;
+			span{
+				display: inline-block;
+				height: $filter_h+rem;
+				padding:0px 0.2rem;
+				text-align: center;
+				line-height: $filter_h+rem;
+				vertical-align: top;
+				box-sizing:border-box;
+				color:#a1a1b3;
+				font-size: 0.16rem;
+				position: relative;				
+			}
+			.active{
+				color:#22222e;
+				border-bottom: 0.04rem solid #22222e;
+			}
+		}
+	}
+	.main-content{
+		padding-bottom: 0.22rem;
+	}
+}
+@include footerclass;
+@import "./temp/article_list.scss";
+@import "./temp/flex.scss";

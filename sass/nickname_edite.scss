@@ -1,0 +1,78 @@
+@import "./temp/var.scss";
+@import "./temp/navbar.scss";
+.main{
+	top: 0.6rem;
+	position: fixed;
+	$filter_h:0.45;
+	// overflow-y:scroll;
+	bottom: 0rem;	
+	width: 100%;
+	background-color: #ffffff;
+	.inputarea{
+		.input_row{
+			position: relative;
+			$input_h:0.4rem;
+			$padding:0.12rem;
+			border-bottom: 1px solid #eeeeee;
+			padding:$padding 0px;
+			.input_box{
+				display: block;
+				height: $input_h;
+				//line-height: $input_h;
+				border-left: 0px none;
+				border-top: 0px none;
+				border-right: 0px none;
+				border-bottom: 0px none;
+				margin:0px 0px 0px 0px;
+				padding:0px 0px 0px 0px;
+				text-indent: 0.2rem;
+				font-size: 0.20rem;
+				color:#22222e;
+				box-sizing:border-box;
+				padding-right:$input_h;
+				&:focus{
+					outline: 0px none;
+				}
+				&:active{
+					outline: 0px none;
+				}
+			}
+			.remove_all{
+				display: block;
+				position: absolute;
+				height: $input_h;
+				width: $input_h;
+				top:$padding;
+				right:0px;
+				background: url("#{$icon-img}chongzhi.png") no-repeat center;
+				background-size: 0.35rem 0.35rem;
+			}
+		}
+		.result{
+			overflow: hidden;
+			span{
+				display: block;
+				float: right;
+				color:#8f8fb3;
+				font-size: 0.14rem;
+				margin-right: 0.1rem;
+				margin-top:0.05rem;
+			}
+		}
+		.search_list{
+			display: block;
+			margin:0px 0px 0px 0px;
+			padding:0px 0px 0px 0px;
+			background-color:#f5f5fa;
+			li{
+				display: block;
+				height: 0.5rem;
+				line-height: 0.5rem;
+				border-bottom: 0.01rem solid #eeeeee;
+				text-indent: 0.6rem;
+				font-size: 0.16rem;
+			}
+		}
+	}
+}
+@import "./temp/flex.scss";

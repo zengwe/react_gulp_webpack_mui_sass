@@ -1,0 +1,185 @@
+/*
+*@author zengw
+*@contect 584778883@qq.com
+*@time Thu Dec 01 2016 16:04:33 GMT+0800 (中国标准时间)
+*/
+@charset "UTF-8";
+.slideUp {
+  position: fixed;
+  width: 100%;
+  height: 0.6rem;
+  font-size: 0.18rem;
+  top: 0rem;
+  left: 0px;
+  background-color: red;
+  z-index: 199; }
+
+.slideDown {
+  position: fixed;
+  width: 100%;
+  height: 0.6rem;
+  font-size: 0.18rem;
+  bottom: -0.6rem;
+  left: 0px;
+  background-color: red;
+  z-index: 99; }
+
+.loadingBox {
+  width: 100%;
+  position: fixed;
+  top: 1rem;
+  z-index: 500; }
+
+.loadingBox div {
+  width: 1.2rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 0.16rem;
+  margin: 0px auto;
+  border-radius: 0.03rem; }
+
+.header {
+  height: 0.6rem;
+  position: fixed;
+  z-index: 200;
+  background-color: #646371;
+  text-align: center;
+  line-height: 0.6rem;
+  top: 0px;
+  width: 100%; }
+  .header p {
+    color: #ffffff;
+    font-size: 0.24rem;
+    margin: 0px 0px; }
+  .header .left-back-icon {
+    background: url("../img/icon/fanhui.png") no-repeat center;
+    left: 0px;
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem; }
+  .header .left-map-icon {
+    background: url("../img/icon/fanhui.png") no-repeat center;
+    left: 0px;
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem; }
+  .header .right-filter-icon {
+    background: url("../img/icon/shaixuan.png") no-repeat center;
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem;
+    right: 0px; }
+  .header .right-share-icon {
+    background: url("../img/icon/fenxiang.png") no-repeat center;
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem;
+    right: 0px; }
+  .header .text_fabu {
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem;
+    right: 0px;
+    font-size: 0.16rem;
+    color: #ffffff; }
+    .header .text_fabu:before {
+      content: "发布";
+      display: block;
+      font-style: normal; }
+  .header .text_queren {
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem;
+    right: 0px;
+    font-size: 0.16rem;
+    color: #ffffff; }
+    .header .text_queren:before {
+      content: "确认";
+      display: block;
+      font-style: normal; }
+
+body {
+  background-color: #f0f5f3; }
+
+.main {
+  top: 0.6rem;
+  position: fixed;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  border-top: 0.1rem solid #f0f5f3; }
+  .main .set_list {
+    padding: 0px 0px;
+    margin: 0px 0px; }
+    .main .set_list li {
+      display: block;
+      padding: 0px 0px;
+      margin: 0px 0px;
+      border-bottom: 1px solid #eeeeee;
+      height: 0.8rem;
+      line-height: 0.8rem;
+      text-indent: 0.3rem;
+      position: relative; }
+      .main .set_list li .switch {
+        height: 0.3rem;
+        width: 0.75rem;
+        background-color: #b8b8cc;
+        position: absolute;
+        top: 0.25rem;
+        right: 0.2rem;
+        border-radius: 0.15rem;
+        -webkit-transition: .2s ease-in-out;
+        transition: .2s ease-in-out; }
+        .main .set_list li .switch .round {
+          height: 0.27rem;
+          border-radius: 0.24rem;
+          background-color: #ffffff;
+          width: 0.3rem;
+          position: absolute;
+          top: 0.015rem;
+          left: 0.015rem;
+          transition: .2s ease-in-out; }
+      .main .set_list li .switch_active {
+        background-color: #45e6b0; }
+        .main .set_list li .switch_active .round {
+          top: 0.015rem;
+          left: 0.435rem; }
+
+@media only screen and (max-width: 319px) {
+  html {
+    font-size: 450%; } }
+
+@media only screen and (min-width: 320px) and (max-width: 375px) {
+  html {
+    font-size: 500%; } }
+
+@media only screen and (min-width: 376px) and (max-width: 639px) {
+  html {
+    font-size: 400%; } }
+
+@media only screen and (min-width: 640px) and (max-width: 900px) {
+  html {
+    font-size: 1200%; } }
+
+@media only screen and (min-width: 901px) {
+  html {
+    font-size: 1500%; } }

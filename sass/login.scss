@@ -1,0 +1,66 @@
+@import "./temp/var.scss";
+body{
+	margin:0px 0px;
+	padding:0px 0px 0.3rem 0px;
+}
+.main{
+	position: relative;
+	z-index: 2;
+	padding:0px 0px 0.8rem 0px;
+	.photoarea{
+		display: block;
+		padding:0.6rem 1.2rem 0.3rem 1.2rem;
+		.userphoto{
+			display: table;
+			overflow: hidden;
+			margin:0px auto;
+			img{
+				display: block;
+				height: 1.04rem;
+				width: 1.04rem;
+				border-radius: 50%;
+			}
+		}
+	}
+	@import "./temp/login_inputarea.scss";
+	.wechatloginarea{
+		display: block;
+		width: 100%;
+		position: absolute;
+		bottom: 0.0rem;
+		left: 0px;
+		height: 1px;
+		//border-top: 1px solid red;
+		// border-right:1px solid $border-color;
+		z-index: 101;
+		.wechat_btn{
+			display: table;
+			@include noborder-input;
+			background-color: transparent;
+			font-size: 0.20rem;
+			color:#9b9aab;
+			padding:0px 0px 0px 0.45rem;
+			background: url("#{$icon-img}wechat.png") no-repeat 0rem 0.05rem;
+			background-size: 0.4rem 0.4rem;
+			height: 0.5rem;
+			line-height: 0.5rem;
+			position: relative;
+			top:-0.25rem;
+			//width: 100%;
+			margin:0px auto;
+		}
+	}
+}
+.bg_style{
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top:0px;
+	left:0px;
+	background: url("../img/icon/login_bg.png");
+	right:0px;
+	bottom: 0px;
+	z-index: 1;
+}
+@import "./temp/flex.scss";

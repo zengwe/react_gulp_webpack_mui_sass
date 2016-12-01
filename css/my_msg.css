@@ -1,0 +1,229 @@
+/*
+*@author zengw
+*@contect 584778883@qq.com
+*@time Thu Dec 01 2016 16:04:33 GMT+0800 (中国标准时间)
+*/
+@charset "UTF-8";
+.slideUp {
+  position: fixed;
+  width: 100%;
+  height: 0.6rem;
+  font-size: 0.18rem;
+  top: 0rem;
+  left: 0px;
+  background-color: red;
+  z-index: 199; }
+
+.slideDown {
+  position: fixed;
+  width: 100%;
+  height: 0.6rem;
+  font-size: 0.18rem;
+  bottom: -0.6rem;
+  left: 0px;
+  background-color: red;
+  z-index: 99; }
+
+.loadingBox {
+  width: 100%;
+  position: fixed;
+  top: 1rem;
+  z-index: 500; }
+
+.loadingBox div {
+  width: 1.2rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 0.16rem;
+  margin: 0px auto;
+  border-radius: 0.03rem; }
+
+.header {
+  height: 0.6rem;
+  position: fixed;
+  z-index: 200;
+  background-color: #646371;
+  text-align: center;
+  line-height: 0.6rem;
+  top: 0px;
+  width: 100%; }
+  .header p {
+    color: #ffffff;
+    font-size: 0.24rem;
+    margin: 0px 0px; }
+  .header .left-back-icon {
+    background: url("../img/icon/fanhui.png") no-repeat center;
+    left: 0px;
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem; }
+  .header .left-map-icon {
+    background: url("../img/icon/fanhui.png") no-repeat center;
+    left: 0px;
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem; }
+  .header .right-filter-icon {
+    background: url("../img/icon/shaixuan.png") no-repeat center;
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem;
+    right: 0px; }
+  .header .right-share-icon {
+    background: url("../img/icon/fenxiang.png") no-repeat center;
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem;
+    right: 0px; }
+  .header .text_fabu {
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem;
+    right: 0px;
+    font-size: 0.16rem;
+    color: #ffffff; }
+    .header .text_fabu:before {
+      content: "发布";
+      display: block;
+      font-style: normal; }
+  .header .text_queren {
+    height: 0.6rem;
+    width: 0.6rem;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-size: 0.35rem 0.35rem;
+    right: 0px;
+    font-size: 0.16rem;
+    color: #ffffff; }
+    .header .text_queren:before {
+      content: "确认";
+      display: block;
+      font-style: normal; }
+
+body {
+  background-color: #f0f5f3; }
+
+.main {
+  top: 0.6rem;
+  position: fixed;
+  bottom: 0rem; }
+  .main .main-content {
+    padding-bottom: 0.22rem; }
+  .main .msg_content .msg_list {
+    padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+    background-color: #ffffff;
+    margin: 0.1rem 0px 0px 0px; }
+    .main .msg_content .msg_list .msg_info {
+      overflow: hidden; }
+      .main .msg_content .msg_list .msg_info .userinfo {
+        float: left; }
+        .main .msg_content .msg_list .msg_info .userinfo .userphoto {
+          display: inline-block;
+          vertical-align: top;
+          height: 0.6rem;
+          width: 0.6rem;
+          border-radius: 50%;
+          overflow: hidden; }
+          .main .msg_content .msg_list .msg_info .userinfo .userphoto img {
+            display: block;
+            height: 0.6rem;
+            width: 0.6rem; }
+        .main .msg_content .msg_list .msg_info .userinfo .username {
+          display: inline-block;
+          vertical-align: top;
+          height: 0.6rem;
+          line-height: 0.6rem;
+          font-size: 0.18rem;
+          color: #22222e; }
+      .main .msg_content .msg_list .msg_info .pub_time {
+        float: right;
+        height: 0.6rem;
+        line-height: 0.6rem;
+        font-size: 0.16rem;
+        color: #a1a1b3; }
+    .main .msg_content .msg_list .text_content {
+      margin-top: 0.1rem; }
+      .main .msg_content .msg_list .text_content p {
+        padding: 0px 0px;
+        margin: 0px 0px;
+        font-size: 0.18rem;
+        line-height: 0.24rem;
+        color: #333333; }
+        .main .msg_content .msg_list .text_content p .targetname {
+          color: #45e6b0; }
+    .main .msg_content .msg_list .article {
+      margin-top: 0.2rem;
+      padding: 0.1rem 0.1rem;
+      background-color: #eeeeee; }
+      .main .msg_content .msg_list .article .article_cover {
+        display: inline-block;
+        vertical-align: top;
+        position: relative; }
+        .main .msg_content .msg_list .article .article_cover img {
+          height: 1rem;
+          width: 1rem; }
+        .main .msg_content .msg_list .article .article_cover .cover {
+          position: absolute;
+          top: 0px;
+          bottom: 0px;
+          left: 0px;
+          right: 0px;
+          background: url("../img/icon/zanting_sl.png") no-repeat center rgba(0, 0, 0, 0.3);
+          background-size: 0.6rem 0.6rem; }
+      .main .msg_content .msg_list .article .title {
+        display: inline-block;
+        vertical-align: top;
+        padding: 0px 0px 0px 0.1rem; }
+        .main .msg_content .msg_list .article .title h2 {
+          white-space: nowrap;
+          line-height: 1rem;
+          padding: 0px 0px;
+          margin: 0px 0px; }
+          .main .msg_content .msg_list .article .title h2 .theme {
+            white-space: nowrap;
+            display: inline;
+            font-size: 0.16rem;
+            color: #22222e; }
+          .main .msg_content .msg_list .article .title h2 p {
+            white-space: nowrap;
+            display: inline;
+            font-size: 0.16rem;
+            color: #818199; }
+
+@media only screen and (max-width: 319px) {
+  html {
+    font-size: 450%; } }
+
+@media only screen and (min-width: 320px) and (max-width: 375px) {
+  html {
+    font-size: 500%; } }
+
+@media only screen and (min-width: 376px) and (max-width: 639px) {
+  html {
+    font-size: 400%; } }
+
+@media only screen and (min-width: 640px) and (max-width: 900px) {
+  html {
+    font-size: 1200%; } }
+
+@media only screen and (min-width: 901px) {
+  html {
+    font-size: 1500%; } }
