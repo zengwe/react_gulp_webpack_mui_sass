@@ -46,10 +46,10 @@
 
 	"use strict";
 
-	var EmptyList = __webpack_require__(1);
-	var ChooseList = __webpack_require__(2);
+	var EmptyList = __webpack_require__(4);
+	var ChooseList = __webpack_require__(5);
 	var LoadingState = __webpack_require__(3);
-	var Promise = __webpack_require__(4).Promise;
+	var Promise = __webpack_require__(6).Promise;
 	var MainCenter = React.createClass({
 		displayName: "MainCenter",
 
@@ -196,7 +196,32 @@
 	ReactDOM.render(React.createElement(MainCenter, null), document.querySelector('.inputcommentsarea'));
 
 /***/ },
-/* 1 */
+/* 1 */,
+/* 2 */,
+/* 3 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	var LoadingState = React.createClass({
+		displayName: "LoadingState",
+
+		render: function render() {
+			return React.createElement(
+				"div",
+				{ className: "loadingBox" },
+				React.createElement(
+					"div",
+					null,
+					"\u52A0\u8F7D\u4E2D\u2026\u2026"
+				)
+			);
+		}
+	});
+	module.exports = LoadingState;
+
+/***/ },
+/* 4 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -220,7 +245,7 @@
 	module.exports = EmptyList;
 
 /***/ },
-/* 2 */
+/* 5 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -280,30 +305,7 @@
 	module.exports = ChooseList;
 
 /***/ },
-/* 3 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	var LoadingState = React.createClass({
-		displayName: "LoadingState",
-
-		render: function render() {
-			return React.createElement(
-				"div",
-				{ className: "loadingBox" },
-				React.createElement(
-					"div",
-					null,
-					"\u52A0\u8F7D\u4E2D\u2026\u2026"
-				)
-			);
-		}
-	});
-	module.exports = LoadingState;
-
-/***/ },
-/* 4 */
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var require;/* WEBPACK VAR INJECTION */(function(process, global) {/*!
@@ -442,7 +444,7 @@
 	function attemptVertx() {
 	  try {
 	    var r = require;
-	    var vertx = __webpack_require__(6);
+	    var vertx = __webpack_require__(8);
 	    vertxNext = vertx.runOnLoop || vertx.runOnContext;
 	    return useVertxTimer();
 	  } catch (e) {
@@ -1463,10 +1465,10 @@
 
 	})));
 	//# sourceMappingURL=es6-promise.map
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5), (function() { return this; }())))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7), (function() { return this; }())))
 
 /***/ },
-/* 5 */
+/* 7 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -1652,7 +1654,7 @@
 
 
 /***/ },
-/* 6 */
+/* 8 */
 /***/ function(module, exports) {
 
 	/* (ignored) */

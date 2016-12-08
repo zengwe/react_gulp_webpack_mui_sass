@@ -50,7 +50,6 @@
 		displayName: "TimeTable",
 
 		getInitialState: function getInitialState() {
-
 			return {
 				year: 2016,
 				month: 12,
@@ -62,11 +61,11 @@
 			mui(".title").on("tap", ".lefticon", function () {
 				if (_this.state.month > 1) {
 					_this.setState({
-						month: _this.state.month - 1
+						month: parseInt(_this.state.month) - 1
 					});
 				} else {
 					_this.setState({
-						year: _this.state.year - 1,
+						year: parseInt(_this.state.year) - 1,
 						month: 12
 					});
 				}
@@ -74,12 +73,12 @@
 			mui(".title").on("tap", ".righticon", function () {
 				if (_this.state.month > 11) {
 					_this.setState({
-						year: _this.state.year + 1,
+						year: parseInt(_this.state.year) + 1,
 						month: 1
 					});
 				} else {
 					_this.setState({
-						month: _this.state.month + 1
+						month: parseInt(_this.state.month) + 1
 					});
 				}
 			});
@@ -96,7 +95,6 @@
 					});
 				}
 			});
-			console.log("plus ready");
 			mui.plusReady(function () {
 				var self = plus.webview.currentWebview();
 				var timeArr = self.time.split("-");

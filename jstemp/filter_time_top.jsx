@@ -1,6 +1,5 @@
 let TimeTable=React.createClass({
 	getInitialState:function(){
-
 		return {
 			year:2016,
 			month:12,
@@ -12,11 +11,11 @@ let TimeTable=React.createClass({
 		mui(".title").on("tap",".lefticon",function(){
 			if(_this.state.month>1){
 				_this.setState({
-					month:_this.state.month-1
+					month:parseInt(_this.state.month)-1
 				});
 			}else{
 				_this.setState({
-					year:_this.state.year-1,
+					year:parseInt(_this.state.year)-1,
 					month:12
 				});
 			}
@@ -24,12 +23,12 @@ let TimeTable=React.createClass({
 		mui(".title").on("tap",".righticon",function(){
 			if(_this.state.month>11){
 				_this.setState({
-					year:_this.state.year+1,
+					year:parseInt(_this.state.year)+1,
 					month:1
 				});
 			}else{
 				_this.setState({
-					month:_this.state.month+1
+					month:parseInt(_this.state.month)+1
 				});
 			}
 		});
@@ -46,7 +45,6 @@ let TimeTable=React.createClass({
 				});					
 			}
 		});
-		console.log("plus ready");
 		mui.plusReady(function(){
 			let self = plus.webview.currentWebview();
 			var timeArr=self.time.split("-");

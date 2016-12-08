@@ -1,6 +1,6 @@
 var config=(function(){
 	//var baseurl="http://127.0.0.1:3100/api";
-	var base="http://172.16.21.113:3100"
+	var base="http://172.16.20.109:3100"
 	var baseurl=base+"/api";
 	var config={
 		imgurl:base,

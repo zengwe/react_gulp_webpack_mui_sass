@@ -46,7 +46,8 @@ gulp.task("jsx",function(){
                 fiter_top:__dirname+"/jstemp/fiter_top.jsx",
                 filter_area_top:__dirname+"/jstemp/filter_area_top.jsx",
                 filter_time_top:__dirname+"/jstemp/filter_time_top.jsx",
-                filter_type_top:__dirname+"/jstemp/filter_type_top.jsx"
+                filter_type_top:__dirname+"/jstemp/filter_type_top.jsx",
+                dynamic_state:__dirname+"/jstemp/dynamic_state.jsx"
             },
             output:{
                 filename:'[name].jsx'

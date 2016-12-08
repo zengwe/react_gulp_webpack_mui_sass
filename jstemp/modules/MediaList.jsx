@@ -42,13 +42,9 @@ var MediaList=React.createClass({
 				thisObj.pause();
 			}
 		});
-		console.log(thisNode.childNodes)
 		for(let i=0;i<thisNode.childNodes.length;i++){
-			console.log(thisNode.childNodes[i].className);
 			if(thisNode.childNodes[i].className=="relation-imgs"){
-				console.log("bangding");
 				for(let j=0;j<thisNode.childNodes[i].childNodes.length;j++){
-					console.log(thisNode.childNodes[i].childNodes[j]);
 					if(thisNode.childNodes[i].childNodes[j].nodeName=="SPAN"){
 						let target=thisNode.childNodes[i].childNodes[j].childNodes;
 						let timer=0;
@@ -56,13 +52,11 @@ var MediaList=React.createClass({
 							clearInterval(timer);
 						}
 						target[0].addEventListener("playing",function(){
-							console.log("for playing");
 							target[1].style.display="block";
 							let vedioObj=this;
 							timer=setInterval(function(){
 								let percent=vedioObj.currentTime/vedioObj.duration;
 								let progress=target[1].childNodes[1].clientWidth*percent;
-								console.log(target[1].childNodes[1].childNodes[0]);
 								target[1].childNodes[1].childNodes[0].style.width=progress+"px";
 								let cha=vedioObj.duration-vedioObj.currentTime;
 								_this.setState({
@@ -81,23 +75,16 @@ var MediaList=React.createClass({
 						});
 						let startVal=0;
 						target[1].childNodes[1].childNodes[0].childNodes[0].addEventListener("dragstart",function(ev){
-							console.log("start drag");
-							console.log(startVal);
 							startVal=parseFloat(target[1].childNodes[1].childNodes[0].style.width);
-							console.log(startVal);
 							clearInterval(timer);
 						});						
 						target[1].childNodes[1].childNodes[0].childNodes[0].addEventListener("drag",function(ev){
-							console.log("drag");
 							let finaly=startVal+ev.detail.deltaX;
-							console.log(finaly);
 							target[1].childNodes[1].childNodes[0].style.width=finaly+"px";
 						});
 						target[1].childNodes[1].childNodes[0].childNodes[0].addEventListener("dragend",function(){
-							console.log("end drag");
 							let percent=parseFloat(target[1].childNodes[1].childNodes[0].style.width)/parseFloat(target[1].childNodes[1].clientWidth);
 							let willTime=target[0].duration*percent;
-							console.log(willTime);
 							target[0].currentTime=willTime;
 							//mui.trigger(target[0],"playing");
 						});
@@ -142,7 +129,6 @@ var MediaList=React.createClass({
 		let vedio=[];
 		let text="";
 		for(let i=0;i<this.props.media.length;i++){
-			//console.log(this.props.media[i].mType);
 			switch (this.props.media[i].mType) {
 				case 1://文字
 					text=this.props.media[i].name;
